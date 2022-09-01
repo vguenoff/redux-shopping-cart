@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { Products } from './features/products/Products'
 import { CartLink } from './features/cart/CartLink'
 import { Cart } from './features/cart/Cart'
-import styles from './App.module.css'
+import styles from './App.module.scss'
 
 function App() {
     return (

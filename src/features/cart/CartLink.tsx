@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import styles from './CartLink.module.css'
+import styles from './CartLink.module.scss'
 
 export function CartLink() {
     return (

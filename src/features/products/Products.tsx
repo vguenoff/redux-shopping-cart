@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { getProducts, Product } from '../../app/api'
-import styles from './Products.module.css'
+import styles from './Products.module.scss'
 
 export function Products() {
     const [products, setProducts] = useState<Product[]>([])
+
     useEffect(() => {
         getProducts().then(products => {
             setProducts(products)
         })
     }, [])
+
     return (
         <main className="page">
             <ul className={styles.products}>
