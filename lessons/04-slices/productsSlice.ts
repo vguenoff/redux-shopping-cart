@@ -1,18 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
-import type { Product } from "../../app/api";
+import { createSlice } from '@reduxjs/toolkit'
+import type { Product } from '../../app/api'
 
 export interface ProductsState {
-  products: { [id: string]: Product };
+    products: { [id: string]: Product }
 }
 
 const initialState: ProductsState = {
-  products: {},
-};
+    products: {},
+}
 
 const productsSlice = createSlice({
-  initialState,
-  name: "products",
-  reducers: {},
-});
+    initialState,
+    name: 'products',
+    reducers: {},
+})
 
-export default productsSlice.reducer;
+export default productsSlice.reducer
