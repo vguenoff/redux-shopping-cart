@@ -1,3 +1,6 @@
+// utility function to simulate slowness in an API call
+const sleep = (time: number) => new Promise(res => setTimeout(res, time))
+
 export interface Product {
     id: string
     name: string
@@ -26,11 +29,10 @@ export async function checkout(items: CartItems): Promise<CheckoutResponse> {
         body: JSON.stringify(items),
     })
     const data = await response.json()
+
     if (!data.success) {
         throw new Error(data.error)
     }
+
     return data as CheckoutResponse
 }
-
-// utility function to simulate slowness in an API call
-const sleep = (time: number) => new Promise(res => setTimeout(res, time))
